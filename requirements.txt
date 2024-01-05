@@ -1,5 +1,5 @@
 akshare==1.10.42
 backtrader==1.9.78.123
-streamlit==1.23.1
+streamlit
 streamlit-echarts==0.4.0
 matplotlib==2.2.3
