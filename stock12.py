@@ -6,7 +6,7 @@ Created on Thu May 18 10:15:34 2023
 """
 import sqlite3
 import pandas as pd  
-import talib
+#import talib
 from datetime import datetime
 import backtrader as bt
 import matplotlib.pyplot as plt
