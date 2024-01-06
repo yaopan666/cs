@@ -124,10 +124,10 @@ def line_cash(x):
       ]
     };
     return option
-
+#"https://github.com/yaopan666/cs/stock_2018.db"
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
-conn=sqlite3.connect("/mount/src/cs/stock_2018.db")
+conn=sqlite3.connect("https://github.com/yaopan666/cs/stock_2018.db")
 stock_daily=read_hq()
 n1=len(stock_daily.date.unique())
 z1=pd.Series(range(0,n1),index=stock_daily.date.unique()).sort_index()
