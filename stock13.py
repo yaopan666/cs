@@ -125,7 +125,7 @@ def line_cash(x):
     };
     return option
 #"https://github.com/yaopan666/cs/stock_2018.db"
-"yaopan666/cs/master/stock_2018.db"
+#"yaopan666/cs/master/stock_2018.db"
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
 conn=sqlite3.connect("yaopan666/cs/master/stock_2018.db")
