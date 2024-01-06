@@ -126,7 +126,7 @@ def line_cash(x):
     return option
 
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
-conn=sqlite3.connect("master/cs/stock_2018.db")#stock_2018.db
+conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
 #conn=sqlite3.connect('stock_2018.db')
 stock_daily=read_hq()
 n1=len(stock_daily.date.unique())
