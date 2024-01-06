@@ -20,6 +20,18 @@ from pylab import mpl
 mpl.rcParams['font.sans-serif']=['SimHei']
 mpl.rcParams['axes.unicode_minus']=False
 
+
+import os
+
+# 获取当前文件的绝对路径
+current_path = os.path.abspath(__file__)
+
+# 输出当前文件的绝对路径
+print("打印日志",current_path)
+
+
+
+
 @st.cache_data
 def read_hq():
     stock_daily=pd.read_sql("select * from stock_daily where 股票代码>'003000.SZ'",con=conn)
