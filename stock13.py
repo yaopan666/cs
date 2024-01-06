@@ -124,19 +124,10 @@ def line_cash(x):
       ]
     };
     return option
-import os
 
-# 获取当前工作目录
-current_dir = os.getcwd()
-
-# 构建文件路径
-file_path = os.path.join(current_dir, 'stock_2018.db')
-
-# 连接到数据库文件
-conn = sqlite3.connect(file_path)
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
-#conn=sqlite3.connect('stock_2018.db')
+conn=sqlite3.connect("./stock_2018.db")
 stock_daily=read_hq()
 n1=len(stock_daily.date.unique())
 z1=pd.Series(range(0,n1),index=stock_daily.date.unique()).sort_index()
