@@ -141,7 +141,7 @@ def line_cash(x):
 #"yaopan666/cs/master/stock_2018.db"
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
-conn = sqlite3.connect('./data/stock_2018.db')
+conn = sqlite3.connect('./stock_2018.db')
 c = conn.cursor()
 #conn=sqlite3.connect()
 stock_daily=read_hq()
