@@ -6,7 +6,7 @@ Created on Thu May 18 10:15:34 2023
 """
 import sqlite3
 import pandas as pd  
-from db import create_database, insert_data, query_data_by_adcode
+#from db import create_database, insert_data, query_data_by_adcode
 #streamlit run C:\Users\Administrator\Desktop\stock12.py
 #import talib
 from datetime import datetime
