@@ -2,7 +2,7 @@
 """
 Created on Thu May 18 10:15:34 2023
 
-@author: wp
+@author: yp
 """
 import sqlite3
 import os
