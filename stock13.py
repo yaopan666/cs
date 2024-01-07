@@ -5,6 +5,7 @@ Created on Thu May 18 10:15:34 2023
 @author: wp
 """
 import sqlite3
+import os
 import pandas as pd  
 #from db import create_database, insert_data, query_data_by_adcode
 #streamlit run C:\Users\Administrator\Desktop\stock12.py
@@ -142,8 +143,14 @@ def line_cash(x):
 #"yaopan666/cs/master/stock_2018.db"
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
-conn = sqlite3.connect(r'./stock_2018.db')
-c = conn.cursor()
+
+current_dir = os.path.dirname(__file__)
+db_path = os.path.join(current_dir, 'stock_2018.db')
+conn = sqlite3.connect(db_path)
+
+
+#conn = sqlite3.connect(r'./stock_2018.db')
+#c = conn.cursor()
 #conn =sqlite3.connect()
 stock_daily=read_hq()
 n1=len(stock_daily.date.unique())
