@@ -144,11 +144,11 @@ def line_cash(x):
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
 
-current_dir = os.path.dirname(__file__)
-db_path = os.path.join(current_dir, 'stock_2018.db')
+#current_dir = os.path.dirname(__file__)
+#db_path = os.path.join(current_dir, 'stock_2018.db')
+#conn = sqlite3.connect(db_path)
+db_path='https://github.com/yaopan666/cs/blob/master/stock_2018.db'
 conn = sqlite3.connect(db_path)
-
-
 #conn = sqlite3.connect(r'./stock_2018.db')
 #c = conn.cursor()
 #conn =sqlite3.connect()
