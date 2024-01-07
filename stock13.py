@@ -36,6 +36,7 @@ print("打印日志",current_path)
 @st.cache_data
 def read_hq():
     stock_daily=pd.read_sql("select * from stock_daily where 股票代码>'003000.SZ'",con=conn)
+    #c.execute(f"SELECT * FROM weather_data where adcode = '{adcode}' and reporttime = '{date}' ORDER BY reporttime DESC ")
     stock_daily.columns=['index', 'date', '股票代码', '股票简称', 'open', 'high', 'low', 'close', 'volume',
            '成交额(千元)', '换手率(%)', '量比', '市盈率(静态)', '市盈率(TTM)', '市盈率(动态)', '市净率',
            '市销率', '市销率(TTM)', '股息率(%)', '股息率(TTM)(%)', '总股本(万股)', '流通股本(万股)',
@@ -141,9 +142,9 @@ def line_cash(x):
 #"yaopan666/cs/master/stock_2018.db"
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
-conn = sqlite3.connect('./stock_2018.db')
+conn = sqlite3.connect(r'./stock_2018.db')
 c = conn.cursor()
-#conn=sqlite3.connect()
+#conn =sqlite3.connect()
 stock_daily=read_hq()
 n1=len(stock_daily.date.unique())
 z1=pd.Series(range(0,n1),index=stock_daily.date.unique()).sort_index()
