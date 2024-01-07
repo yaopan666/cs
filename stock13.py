@@ -147,7 +147,8 @@ def line_cash(x):
 #current_dir = os.path.dirname(__file__)
 #db_path = os.path.join(current_dir, 'stock_2018.db')
 #conn = sqlite3.connect(db_path)
-db_path='https://github.com/yaopan666/cs/blob/master/stock_2018.db'
+#/mount/src/cs/stock13.py
+db_path="https://github.com/yaopan666/mount/src/cs/stock_2018.db"
 conn = sqlite3.connect(db_path)
 #conn = sqlite3.connect(r'./stock_2018.db')
 #c = conn.cursor()
