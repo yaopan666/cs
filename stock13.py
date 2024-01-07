@@ -6,6 +6,7 @@ Created on Thu May 18 10:15:34 2023
 """
 import sqlite3
 import pandas as pd  
+from db import create_database, insert_data, query_data_by_adcode
 #streamlit run C:\Users\Administrator\Desktop\stock12.py
 #import talib
 from datetime import datetime
@@ -139,12 +140,10 @@ def line_cash(x):
 #"https://github.com/yaopan666/cs/stock_2018.db"
 #"yaopan666/cs/master/stock_2018.db"
 #conn=sqlite3.connect(r'C:\Users\Administrator\Desktop\stock_2018.db')
-
 #conn=sqlite3.connect("cs/stock_2018.db")#stock_2018.db
-file_path = os.path.join(current_path, stock_2018.db)
-
-
-conn=sqlite3.connect(file_path)
+conn = sqlite3.connect('./data/stock_2018.db')
+c = conn.cursor()
+#conn=sqlite3.connect()
 stock_daily=read_hq()
 n1=len(stock_daily.date.unique())
 z1=pd.Series(range(0,n1),index=stock_daily.date.unique()).sort_index()
